@@ -58,7 +58,10 @@ namespace BonaVirtualGamePad.Shared
             binaryWriter.Write(ButtonMask);
             binaryWriter.Write(AdditionalData);
 
-            var result = memoryStream.GetBuffer();
+            var result = new byte[memoryStream.Length];
+            memoryStream.Position = 0;
+            memoryStream.Read(result, 0, (int)memoryStream.Length);
+
             binaryWriter.Close();
             memoryStream.Close();
 
