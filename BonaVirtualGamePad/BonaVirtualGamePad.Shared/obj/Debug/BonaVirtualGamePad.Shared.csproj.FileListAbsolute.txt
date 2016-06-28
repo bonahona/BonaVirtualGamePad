@@ -1,0 +1,5 @@
+C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.Shared\obj\Debug\BonaVirtualGamePad.Shared.csprojResolveAssemblyReference.cache
+C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.Shared\bin\Debug\BonaVirtualGamePad.Shared.dll
+C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.Shared\bin\Debug\BonaVirtualGamePad.Shared.pdb
+C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.Shared\obj\Debug\BonaVirtualGamePad.Shared.dll
+C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.Shared\obj\Debug\BonaVirtualGamePad.Shared.pdb

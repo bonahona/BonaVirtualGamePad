@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BonaVirtualGamePad.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BonaVirtualGamePad.ServerDriver
 {
@@ -9,6 +11,29 @@ namespace BonaVirtualGamePad.ServerDriver
     {
         static void Main(string[] args)
         {
+            new Program();
+        }
+
+
+        public GamePadServer Server { get; set; }
+
+        public Program()
+        {
+            Server = new GamePadServer();
+
+            Console.WriteLine("Start listening...");
+            while (true) {
+                Thread.Sleep(2);
+                var recievedPackages = Server.PollPackages(Server.UdpListener);
+
+                foreach(var package in recievedPackages) {
+
+                    if(package.PackageType == NetworkPackageType.ClientDiscoveryRequest) {
+                        Server.SendNetworkDiscoveryResponse(Server.ListeningEndpoint, package.SourceEndpoint);
+                    }
+                    Console.WriteLine("Recieved package");
+                }
+            }
         }
     }
 }

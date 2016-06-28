@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BonaVirtualGamePad.Server\BonaVirtualGamePad.Server.csproj">
-      <Project>{e780f105-0c04-450c-af0a-f075e1b7f2b0}</Project>
-      <Name>BonaVirtualGamePad.Server</Name>
+    <ProjectReference Include="..\BonaVirtualGamePad.Shared\BonaVirtualGamePad.Shared.csproj">
+      <Project>{989b5a84-629b-410b-a7dc-e15a8ecff20a}</Project>
+      <Name>BonaVirtualGamePad.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaVirtualGamePad.Client", "BonaVirtualGamePad.Client\BonaVirtualGamePad.Client.csproj", "{8BFA36CC-937F-4CC1-88E2-1A0301348FF1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaVirtualGamePad.Server", "BonaVirtualGamePad.Server\BonaVirtualGamePad.Server.csproj", "{E780F105-0C04-450C-AF0A-F075E1B7F2B0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaVirtualGamePad.Shared", "BonaVirtualGamePad.Shared\BonaVirtualGamePad.Shared.csproj", "{989B5A84-629B-410B-A7DC-E15A8ECFF20A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaVirtualGamePad.ServerDriver", "BonaVirtualGamePad.ServerDriver\BonaVirtualGamePad.ServerDriver.csproj", "{FF4636F0-C005-4ECA-B69A-D6CD686D94C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaVirtualGamePad.ClientDriver", "BonaVirtualGamePad.ClientDriver\BonaVirtualGamePad.ClientDriver.csproj", "{46EBAD2A-D582-4A7D-84D1-373006CCF871}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,14 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8BFA36CC-937F-4CC1-88E2-1A0301348FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BFA36CC-937F-4CC1-88E2-1A0301348FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BFA36CC-937F-4CC1-88E2-1A0301348FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BFA36CC-937F-4CC1-88E2-1A0301348FF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E780F105-0C04-450C-AF0A-F075E1B7F2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E780F105-0C04-450C-AF0A-F075E1B7F2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E780F105-0C04-450C-AF0A-F075E1B7F2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E780F105-0C04-450C-AF0A-F075E1B7F2B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{989B5A84-629B-410B-A7DC-E15A8ECFF20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{989B5A84-629B-410B-A7DC-E15A8ECFF20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{989B5A84-629B-410B-A7DC-E15A8ECFF20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +23,10 @@ Global
 		{FF4636F0-C005-4ECA-B69A-D6CD686D94C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF4636F0-C005-4ECA-B69A-D6CD686D94C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF4636F0-C005-4ECA-B69A-D6CD686D94C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EBAD2A-D582-4A7D-84D1-373006CCF871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EBAD2A-D582-4A7D-84D1-373006CCF871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EBAD2A-D582-4A7D-84D1-373006CCF871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EBAD2A-D582-4A7D-84D1-373006CCF871}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
