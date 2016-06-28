@@ -8,7 +8,7 @@ namespace BonaVirtualGamePad.Shared
 {
     public abstract class GamePadNode
     {
-        protected IPEndPoint ParseIpEndPoint(String listeningAddress, int listeningPort)
+        protected IPEndPoint ParseIpEndPoint(String listeningAddress, int listeningPort = Defaults.DEFAULT_SERVER_PORT)
         {
             try{
                 IPAddress ipAddress = IPAddress.Parse(listeningAddress);
@@ -18,6 +18,11 @@ namespace BonaVirtualGamePad.Shared
             } catch(Exception e){
                 throw new BonaVirtualGamePadException("Failed to create IPEndPoint", e);
             }
+        }
+
+        protected IPEndPoint GetBroadCastEndPoint(int listeningPort = Defaults.DEFAULT_SERVER_PORT)
+        {
+            return new IPEndPoint(IPAddress.Broadcast, listeningPort);
         }
     }
 }
