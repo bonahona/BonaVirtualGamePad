@@ -5,9 +5,10 @@ using System.Text;
 
 namespace BonaVirtualGamePad.Shared
 {
-    public static class Defaults
+    public enum PLayerClientStatus : int
     {
-        public const int DEFAULT_SERVER_PORT = 2000;
-        public const int DEFAULT_SERVER_CAPACITY = 12;
+        Unknown         = 0,
+        Connected       = 1,
+        NotConnected    = 2
     }
 }

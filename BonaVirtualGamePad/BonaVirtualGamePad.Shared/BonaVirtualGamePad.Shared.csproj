@@ -45,6 +45,9 @@
     <Compile Include="GamePadServer.cs" />
     <Compile Include="NetworkPackage.cs" />
     <Compile Include="NetworkPackageType.cs" />
+    <Compile Include="PlayerClient.cs" />
+    <Compile Include="PLayerClientStatus.cs" />
+    <Compile Include="PlayerIdentity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vector2.cs" />
   </ItemGroup>

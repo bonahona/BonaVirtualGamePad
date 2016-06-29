@@ -39,7 +39,7 @@ namespace BonaVirtualGamePad.Shared
 
         public List<NetworkPackage> PollPackages(UdpClient udpClient)
         {
-            List<NetworkPackage> result = new List<NetworkPackage>();
+            var result = new List<NetworkPackage>();
 
             while (udpClient.Available > 0) {
                 IPEndPoint source = new IPEndPoint(IPAddress.Any, Defaults.DEFAULT_SERVER_PORT);
@@ -68,14 +68,14 @@ namespace BonaVirtualGamePad.Shared
             return result;
         }
 
-        public NetworkPackage CreateNetworkDiscoveryResponse(IPEndPoint listeningEndpoint)
+        public NetworkPackage CreateNetworkDiscoveryResponse(IPEndPoint listeningEndpoint, GamePadServer gamePadServer)
         {
             var result = new NetworkPackage(NetworkPackageType.ServerDiscovertResponse);
 
             var localIp = GetLocalIp();
             var listeningPort = listeningEndpoint.Port;
 
-            result.AdditionalData = String.Format("address={0};port={1}", localIp, listeningEndpoint.Port);
+            result.AdditionalData = String.Format("address={0};port={1};capacity={2};players={3}", localIp, listeningEndpoint.Port, gamePadServer.GetPlayerCapacity(), gamePadServer.GetPlayerCount());
             return result;
         }
     }
