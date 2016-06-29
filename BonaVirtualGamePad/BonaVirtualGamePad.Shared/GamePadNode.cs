@@ -41,12 +41,16 @@ namespace BonaVirtualGamePad.Shared
         {
             List<NetworkPackage> result = new List<NetworkPackage>();
 
-            if (udpClient.Available > 0) {
+            while (udpClient.Available > 0) {
                 IPEndPoint source = new IPEndPoint(IPAddress.Any, Defaults.DEFAULT_SERVER_PORT);
-                var networkPackage = new NetworkPackage();
-                networkPackage.Read(udpClient.Receive(ref source));
-                networkPackage.SourceEndpoint = source;
-                result.Add(networkPackage);
+                byte[] buffer = udpClient.Receive(ref source);
+                int lastReadOffset = 0;
+                while(lastReadOffset < buffer.Length){
+                    var networkPackage = new NetworkPackage();
+                    lastReadOffset = networkPackage.Read(buffer, lastReadOffset);
+                    networkPackage.SourceEndpoint = source;
+                    result.Add(networkPackage);
+                }
             }
 
             return result;

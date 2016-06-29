@@ -17,7 +17,6 @@ namespace BonaVirtualGamePad.Shared
         public Vector2 RightStick;
         public Vector2 Triggers;
         public UInt32 ButtonMask;
-
         public String AdditionalData;
 
         public NetworkPackage(NetworkPackageType packageType = NetworkPackageType.Unknown)
@@ -31,9 +30,10 @@ namespace BonaVirtualGamePad.Shared
             AdditionalData = "";
         }
 
-        public void Read(byte[] data)
+        // Reads a chunk of the data and return the offset of the data after this package has been read
+        public int Read(byte[] data, int offset)
         {
-            var memoryStream = new MemoryStream(data);
+            var memoryStream = new MemoryStream(data, offset, data.Length - offset);
             var binaryReader = new BinaryReader(memoryStream);
             PackageType = (NetworkPackageType)binaryReader.ReadInt32();
             LeftStick.ReadFromStream(binaryReader);
@@ -42,8 +42,11 @@ namespace BonaVirtualGamePad.Shared
             ButtonMask = binaryReader.ReadUInt32();
             AdditionalData = binaryReader.ReadString();
 
+            var result = (int)memoryStream.Position + offset;
             binaryReader.Close();
             memoryStream.Close();
+
+            return result;
         }
 
         public byte[] ToByteArray()

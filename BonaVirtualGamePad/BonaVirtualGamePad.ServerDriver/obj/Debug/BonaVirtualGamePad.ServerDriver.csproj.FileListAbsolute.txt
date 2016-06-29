@@ -5,3 +5,10 @@ C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtu
 C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\obj\Debug\BonaVirtualGamePad.ServerDriver.pdb
 C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\bin\Debug\BonaVirtualGamePad.Shared.dll
 C:\Users\bona\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\bin\Debug\BonaVirtualGamePad.Shared.pdb
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\obj\Debug\BonaVirtualGamePad.ServerDriver.exe
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\obj\Debug\BonaVirtualGamePad.ServerDriver.pdb
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\bin\Debug\BonaVirtualGamePad.ServerDriver.exe
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\bin\Debug\BonaVirtualGamePad.ServerDriver.pdb
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\bin\Debug\BonaVirtualGamePad.Shared.dll
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\bin\Debug\BonaVirtualGamePad.Shared.pdb
+C:\Users\bjofyr\Documents\Visual Studio 2015\Projects\BonaVirtualGamePad\BonaVirtualGamePad\BonaVirtualGamePad.ServerDriver\obj\Debug\BonaVirtualGamePad.ServerDriver.csprojResolveAssemblyReference.cache
