@@ -39,10 +39,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BonaVirtualGamePadException.cs" />
+    <Compile Include="ClientServerInformation.cs" />
     <Compile Include="Defaults.cs" />
     <Compile Include="GamePadClient.cs" />
     <Compile Include="GamePadNode.cs" />
     <Compile Include="GamePadServer.cs" />
+    <Compile Include="HashHelper.cs" />
     <Compile Include="NetworkPackage.cs" />
     <Compile Include="NetworkPackageType.cs" />
     <Compile Include="PlayerClient.cs" />

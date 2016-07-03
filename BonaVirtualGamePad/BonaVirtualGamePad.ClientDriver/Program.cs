@@ -26,12 +26,17 @@ namespace BonaVirtualGamePad.ClientDriver
 
                 if (command == "broadcast") {
                     Console.WriteLine("Send broadcast");
+                    Client.ClearDiscoveredServers();
                     Client.SendDiscoveryBroadCast();
 
                     Thread.Sleep(50);
                     var responses = Client.PollPackages(Client.Connection);
                     foreach(var response in responses) {
-                        Console.WriteLine("Response:" + response.AdditionalData);
+                        try {
+                            Client.HandlePackagaResponse(response);
+                        }catch(Exception e) {
+                            Console.WriteLine("Failed to handle package, " + e.Message);
+                        }
                     }
                 }
             }

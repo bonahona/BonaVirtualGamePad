@@ -12,10 +12,20 @@ namespace BonaVirtualGamePad.Shared
         public IPEndPoint ListeningEndpoint { get; set; }
         public UdpClient UdpListener { get; set; }
 
+        public String ServerName;
+        public String ServerPassword;
+
         public PlayerClient[] Clients;          // Array of all currently connected players
 
-        public GamePadServer(int capacity = Defaults.DEFAULT_SERVER_CAPACITY, int listeningPort = Defaults.DEFAULT_SERVER_PORT)
+        public GamePadServer(String serverName, String serverPassword = "", int capacity = Defaults.DEFAULT_SERVER_CAPACITY, int listeningPort = Defaults.DEFAULT_SERVER_PORT)
         {
+            if (!ValidateServerName(serverName)) {
+                throw new BonaVirtualGamePadException("Server name contains disallowed characters");
+            }
+
+            ServerName = serverName;
+            ServerPassword = serverPassword;
+
             ListeningEndpoint = new IPEndPoint(IPAddress.Any, listeningPort);
             UdpListener = new UdpClient(ListeningEndpoint);
 

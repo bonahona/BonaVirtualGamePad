@@ -19,7 +19,7 @@ namespace BonaVirtualGamePad.ServerDriver
 
         public Program()
         {
-            Server = new GamePadServer();
+            Server = new GamePadServer(Defaults.DEFAULT_SERVER_NAME, "H4mligt");
 
             Console.WriteLine("Start listening...");
             while (true) {
