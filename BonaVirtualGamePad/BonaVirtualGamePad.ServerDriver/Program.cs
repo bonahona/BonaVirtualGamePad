@@ -1,4 +1,5 @@
 ﻿using BonaVirtualGamePad.Shared;
+using BonaVirtualGamePad.SharedWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,19 +20,20 @@ namespace BonaVirtualGamePad.ServerDriver
 
         public Program()
         {
-            Server = new GamePadServer(Defaults.DEFAULT_SERVER_NAME, "H4mligt");
+            Server = new GamePadServer(new WindowsUdpClient(), new WindowsPlatform(), Defaults.DEFAULT_SERVER_NAME, "H4mligt");
 
             Console.WriteLine("Start listening...");
             while (true) {
                 Thread.Sleep(2);
-                var recievedPackages = Server.PollPackages(Server.UdpListener);
+                var recievedPackages = Server.PollNetworkPackages();
 
                 foreach(var package in recievedPackages) {
 
                     if(package.PackageType == NetworkPackageType.ClientDiscoveryRequest) {
-                        Server.SendNetworkDiscoveryResponse(Server.ListeningEndpoint, package.SourceEndpoint);
+                        Server.SendNetworkDiscoveryResponse(Server.ListeningEndPoint, package.SourceEndpoint);
                     }
                     Console.WriteLine("Recieved package");
+                    Console.WriteLine(package.AdditionalData);
                 }
             }
         }

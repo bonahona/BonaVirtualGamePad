@@ -50,9 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BonaVirtualGamePad.Shared\BonaVirtualGamePad.Shared.csproj">
-      <Project>{989b5a84-629b-410b-a7dc-e15a8ecff20a}</Project>
+    <ProjectReference Include="..\BonaVirtualGamePad.SharedPortable\BonaVirtualGamePad.Shared.csproj">
+      <Project>{95386f6b-8fd5-4d60-8a7d-7321877a50bf}</Project>
       <Name>BonaVirtualGamePad.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BonaVirtualGamePad.SharedWindows\BonaVirtualGamePad.SharedWindows.csproj">
+      <Project>{9c71546e-8340-430d-84f4-c4538379a940}</Project>
+      <Name>BonaVirtualGamePad.SharedWindows</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
